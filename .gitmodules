@@ -1,0 +1,4 @@
+[submodule "addons"]
+	path = addons
+	url = git@github.com:E3KCO/addons.git
+	branch = 15.0
