@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="eft_bank_form" model="ir.ui.view">
+        <field name="name">EFT Bank Form</field>
+        <field name="model">eft.bank</field>
+        <field name="arch" type="xml">
+            <form>
+            
+            <sheet>
+                <label for="name"/>
+                <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                <label for="bank_name"/>
+                <div class="oe_title">
+                        <h3>
+                            <field name="bank_name"/>
+                        </h3>
+                    </div>
+                <group>
+                    <group attrs="{'invisible' : [('bank_name','==','bambora')]}">
+
+                        <field name="issuer_number" placeholder="The 10 digit Issuer Number"/>
+                        <field name="institution" placeholder="The 4 digit Institution Number"/>
+                        <field name="bank_center_transit" placeholder="The 5 digit Banking center transit"/>
+
+                        <field name="issuer_short_name" placeholder="The 15 digit Issuer short name"/>
+                        <field name="issuer_long_name" placeholder="The 30 digit Issuer Long name"/>
+                        <field name="account_number" placeholder="The 12 digit Account number"/>
+
+                        <field name="client_sequence_id"/>
+                        <field name="supplier_sequence_id"/>
+                        <field name="company_id"/>
+                        <field name="filename" invisible="0"/>
+                       <field name="lot_operation_code" placeholder="The 3 digit Operation Code"/>
+                        <field name="other_info_lot" placeholder="The 10 digit others info"/>
+
+
+                    </group>
+                    <group attrs="{'invisible' : [('bank_name','!=','bambora')]}">
+                        <field name="merchant_id"/>
+                        <field name="batch_file_upload"/>
+                        <field name="client_sequence_id"/>
+                        <field name="supplier_sequence_id"/>
+                        <field name="company_id"/>
+
+                    </group>
+                    <group groups="base.group_no_one">
+                        <field name="required_approval" groups="e3k_eft.eft_manager" />
+                        <field name="required_approval_number"
+                               attrs="{'invisible' : [('required_approval','=',False)]}"
+                                groups="e3k_eft.eft_manager"/>
+                        <field name="approval_users"
+                            attrs="{'invisible' : [('required_approval','=',False)]}"
+                            groups="e3k_eft.eft_manager"/>
+                    </group>
+                </group>
+                <group string="Other Information">
+                    <field name="bank_url"/>
+                    <field name="journal_ids" widget="many2many_tags"/>
+                </group>
+                
+               </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="eft_bank_tree" model="ir.ui.view">
+        <field name="name">EFT Bank tree</field>
+        <field name="model">eft.bank</field>
+        <field name="arch" type="xml">
+            <tree>
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="issuer_short_name"/>
+                    <field name="issuer_long_name"/>
+                    <field name="company_id" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="action_eft_payments" model="ir.actions.act_window">
+            <field name="name">EFT Payments</field>
+            <field name="res_model">eft.payment</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}
+            </field>
+        </record>
+        
+        <record id="action_eft_bank" model="ir.actions.act_window">
+            <field name="name">EFT Bank</field>
+            <field name="res_model">eft.bank</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}
+            </field>
+        </record>
+
+    </data>
+</odoo>

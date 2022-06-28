@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="view_partner_form_inherit_eft" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='accounting']" position="after">
+                <page string="EFT" name="eft" groups="e3k_eft.eft_contact_tab_manager">
+                    <group name="eft_entries">
+                        <field name="fte"/>
+                        <field name="code" class="o_bank" placeholder="The 4 digit Client institution code"/>
+                        <field name="unit" class="o_bank" placeholder="Unit"/>
+                        <field name="customer_name" class="o_bank" placeholder="Customer name"/>
+                        <field name="number_transit_client"  class="o_bank" placeholder="The 5 digit Banking center transit"/>
+                        <field name="institution" class="o_bank" placeholder="The 3 digit financial institution number"/>
+                        <field name="branch"  class="o_bank" placeholder="The 5 digit bank transit number"/>
+                        <field name="account" class="o_bank"  placeholder="The 12 Account number of beneficiary or drawer"/>
+                        <field name="referal_number" class="o_bank" placeholder="The 13 digit Client Referal Number"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>

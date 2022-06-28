@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_eft_payment_user,access_eft_user,model_eft_payment,account.group_account_user,1,0,0,0
+access_eft_payment_user,access_eft_user,model_eft_payment,e3k_eft.eft_batch_creation_manager,1,1,1,0
+access_eft_payment_manager,access_eft_manager,model_eft_payment,e3k_eft.eft_batch_create_delete_manager,1,1,1,1
+access_eft_bank_user,access_eft_bank,model_eft_bank,account.group_account_user,1,0,0,0
+access_eft_bank_manager,access_eft_bank,model_eft_bank,account.group_account_manager,1,1,1,1
+access_eft_payment_assign,access_eft_payment_assign,model_eft_payment_assign,,1,1,1,1
+
+

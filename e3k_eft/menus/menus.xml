@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+  <menuitem
+    id="menu_account_eft"
+    parent="account.menu_finance_configuration"
+    name="EFT"
+    groups="e3k_eft.eft_configuration_manager"
+  />
+
+  <menuitem
+    id="menu_eft_bank"
+    parent="menu_account_eft"
+    name="EFT Bank"
+    action="e3k_eft.action_eft_bank"
+    groups="e3k_eft.eft_configuration_manager"
+  />
+
+  <menuitem action="e3k_eft.action_supplier_eft_payments" id="menu_supplier_eft_payments"
+                  parent="account.menu_finance_payables" sequence="50"/>
+
+  <menuitem action="e3k_eft.action_customer_eft_payments" id="menu_customer_eft_payments"
+                  parent="account.menu_finance_receivables" sequence="50"/>
+
+    </data>
+</odoo>

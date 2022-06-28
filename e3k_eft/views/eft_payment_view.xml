@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_eft_payment_tree" model="ir.ui.view">
+            <field name="name">eft.payment.tree</field>
+            <field name="model">eft.payment</field>
+            <field name="arch" type="xml">
+                <tree decoration-info="state == 'draft'" decoration-muted="state in ['cancelled',]" edit="false">
+<!--                    <field name="payment_date"/>-->
+	            <field name="payment_type"/>
+    	            <field name="eft_bank"/>
+                    <field name="name"/>
+                    <field name="amount" sum="Amount"/>
+                    <field name="currency_id"/>
+                    <field name="state"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_eft_payment_form" model="ir.ui.view">
+            <field name="name">eft.payment.form</field>
+            <field name="model">eft.payment</field>
+            <field name="arch" type="xml">
+                <form string="Register Payment">
+                    <header>
+                        <button name="action_confirm" class="oe_highlight" states="draft" string="Confirm"
+                                type="object"/>
+
+                        <button string="application for approval" name="approval_application"
+                            type="object"
+                            class="btn-primary"
+                            attrs="{'invisible':[('|'),('related_required_approval','=',False),('state','not in',['confirm'])]}"
+                           />
+
+                        <button string="approuve" name="approuve"
+                            type="object"
+                            class="btn-primary"
+                            attrs="{'invisible':[('|'),('display_approuved_button','=',False),('state','not in',['waiting_approuve'])]}"
+                           />
+
+                        <button name="action_draft" class="btn btn-secondary"
+                                attrs="{'invisible': [('state', 'in', 'draft')]}" string="Reset To Draft"
+                                type="object"/>
+                        <button name="action_cancel" states="draft" string="Cancel" type="object"/>
+                        <button name="action_send" class="btn btn-secondary" states="confirm" string="Send"
+                                type="object"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,posted,cancelled,send"/>
+                    </header>
+                    <sheet>
+                        <field name="id" invisible="1"/>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group name="left_column" states="confirm,approuved">
+                                <field name="number_of_approval" readonly="1" invisible="1"/>
+                                <field name="display_approuved_button"  invisible="1"/>
+                                <field name="related_required_approval" invisible="1"/>
+                                <field name="success_approval_users" invisible="1"/>
+                                <field name="display_post_button"  invisible="1"/>
+                                <field name="related_bank_name" invisible="1"/>
+                                <field name="file_generated" invisible="1"/>
+                                <field name="batch_id" readonly="1" attrs="{'invisible':[('batch_id','==',False)]}"/>
+                                <field name="message_info" attrs="{'invisible':[('related_required_approval','=',False)]}"/>
+                                <button name="action_file" class="btn btn-secondary"
+                                        string="Generate file" type="object"
+                                        attrs="{'invisible':['|',('display_post_button','=',False),('file_generated','=',True)]}"
+                                />
+                            </group>
+
+                            <group states="send">
+                                <separator  string="Exported file"/>
+                                <field name="filename" invisible="1"/>
+                                <field name="data" nolabel="1" readonly="1" filename="name"/>
+                                <field name="advice" nolabel="1" style="color:blue ! important;"/>
+                                <field name="batch_id" readonly="1" attrs="{'invisible':[('batch_id','==',False)]}" />
+                                <field name="succees_transfert_message"
+                                       style = "border-radius:3px solid; background-color:#4d4dff;color:white;font-size:16px;"
+                                       attrs="{'invisible':[('batch_id','==',False)]}"
+                                       />
+                            </group>
+                            <group name="right_column" >
+<!--                                <field name="payment_date"/>-->
+                                <field name="amount"/>
+                                <field name="currency_id"/>
+                                <field name="eft_date"/>
+            	                <field name="eft_bank" required="1" 
+            	                	options="{'no_create_edit': True, 'no_create':True, 'no_open':True}"/>
+                            </group>
+                        </group>
+                        
+                        <field name="payment_type" invisible="1"/>
+                        <field name="related_journal" invisible="1"/>
+                        <notebook>
+                            <page string="Payment lines" name="Paymentlines">
+                                <field
+                                        name="payment_ids"
+                                        mode="tree,kanban"
+                                        attrs="{'readonly': [('state', 'not in', ['draft',])]}"
+                                        domain="[('transaction_id' ,'=', False),('payment_type' ,'=', payment_type),
+                                        ('state', 'not in', ['draft','cancelled']),
+                                        ('journal_id','in',related_journal)]"
+                                >
+                                    <tree
+                                            string="Payment Lines"
+                                            editable="bottom"
+                                    >
+                                        <field name="name"/>
+                                        <field name="partner_id"/>
+<!--                                        <field name="payment_date" invisible="0"/>-->
+                                        <field name="amount" invisible="0"/>
+                                        <field name="company_id" invisible="1"/>
+                                        <field name="state" invisible="1"/>
+                                        <field name="currency_id" invisible="0"/>
+                                        <field name="transaction_id" invisible="1"/>
+                                    </tree>
+
+                                </field>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                    <div class="o_attachment_preview"/>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_supplier_eft_payments" model="ir.actions.act_window">
+            <field name="name">EFT Payments</field>
+            <field name="res_model">eft.payment</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('payment_type' ,'=', 'outbound')]</field>
+            <field name="context">{'default_payment_type': 'outbound'}</field>
+            <field name="view_id" ref="view_eft_payment_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Supplier EFT Payment
+                </p>
+                <p>
+                    Payments are used to register liquidity movements. You can process those payments by your own means
+                    or by using installed facilities.
+                </p>
+            </field>
+        </record>
+        
+        <record id="action_customer_eft_payments" model="ir.actions.act_window">
+            <field name="name">EFT Payments</field>
+            <field name="res_model">eft.payment</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('payment_type' ,'=', 'inbound')]</field>
+            <field name="context">{'default_payment_type': 'inbound'}</field>
+            <field name="view_id" ref="view_eft_payment_tree"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Customer EFT Payment
+                </p>
+                <p>
+                    Payments are used to register liquidity movements. You can process those payments by your own means
+                    or by using installed facilities.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
