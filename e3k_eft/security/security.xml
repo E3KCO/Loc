@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data>
+        <record id="eft_manager" model="res.groups">
+            <field name="name">Allowed EFT Authentification</field>
+        </record>
+        <record id="eft_configuration_manager" model="res.groups">
+            <field name="name">Allowed EFT configurations</field>
+        </record>
+        <record id="eft_contact_tab_manager" model="res.groups">
+            <field name="name">Allowed EFT contact tab</field>
+        </record>
+        <record id="eft_batch_creation_manager" model="res.groups">
+            <field name="name">Allowed EFT batch creation</field>
+        </record>
+        <record id="eft_batch_create_delete_manager" model="res.groups">
+            <field name="name">Allowed EFT batch creation and deletion</field>
+        </record>
+
+
+
+
+<!--        <record id="ir_rule_fte_eft" model="ir.rule">-->
+<!--            <field name="name">FTE: Multi Company</field>-->
+<!--            <field name="model_id" ref="model_eft_payment"/>-->
+<!--            <field name="global" eval="True"/>-->
+<!--            <field name="domain_force">['|',('company_id','=',False),('company_id','=', user.company_id.id)]</field>-->
+<!--        </record>-->
+    </data>
+</odoo>

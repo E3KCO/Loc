@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        
+    <record id="base_sequence_view_inherit" model="ir.ui.view">
+        <field name="name">base.sequence.view.inherit</field>
+        <field name="model">ir.sequence</field>
+        <field name="inherit_id" ref="base.sequence_view"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='implementation']" position="after">
+                <field name="bank_name"/>
+                <field name="types"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    </data>
+</odoo>

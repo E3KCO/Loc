@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Payments Assign  -->
+    <record id="eft_payment_assign_form" model="ir.ui.view">
+        <field name="name">eft.payment.assign.form</field>
+        <field name="model">eft.payment.assign</field>
+        <field name="arch" type="xml">
+            <form string="Payments Assign">
+                <group col="4">
+                    <field name="count" string="Number of payments"/>
+                    <field name="eft_bank" 
+                           options="{'no_create_edit': True, 'no_create':True, 'no_open':True}"/>
+                    <field name="payment_type" invisible="1"/>
+                </group>
+                <field name="payment_ids" readonly="1"/>
+<!--            	<field name="payment_ids"  -->
+<!--                    domain="[('state' ,'not in', ['cancelled','draft']),-->
+<!--                    ('transaction_id' ,'=', False),-->
+<!--                    ('payment_type' ,'=', payment_type)]">-->
+<!--                    <tree editable="bottom" edit="0" create="0" delete="0">-->
+<!--    		            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>-->
+<!--&lt;!&ndash;		            <field name="payment_date"/>&ndash;&gt;-->
+<!--		            <field name="name"/>-->
+<!--		            <field name="journal_id"/>-->
+<!--		            <field name="payment_method_id"/>-->
+<!--		            <field name="partner_id" string="Customer"/>-->
+<!--		            <field name="amount" sum="Amount"/>-->
+<!--		            <field name="state"/>-->
+<!--		            <field name="company_id" groups="base.group_multi_company"/>-->
+<!--		            <field name="currency_id" invisible="1"/>-->
+<!--		            <field name="partner_type" invisible="1"/>-->
+<!--                    </tree>-->
+<!--                </field>-->
+                <footer>
+
+                     <h3>Click On Verification</h3>
+                     <br/>
+                    <button name="action_compute" type="object"
+                            string="Verification" class="btn-primary"
+                            attrs="{'invisible': [('payment_ids', '!=', [])]}"/>
+                    <button name="action_assign" type="object"
+                            string="Assign" class="btn-primary"
+                            attrs="{'invisible': [('payment_ids', '=', [])]}"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+        <record id="eft_payment_assign_action" model="ir.actions.act_window">
+            <field name="name">Assign payments in EFT</field>
+            <field name="res_model">eft.payment.assign</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_account_payment"/>
+            <field name="binding_view_types">list</field>
+        </record>
+<!--        <act_window-->
+<!--            id="eft_payment_assign_action"-->
+<!--            name="Assign payments in EFT"-->
+<!--            res_model="eft.payment.assign"-->
+<!--            binding_model="account.payment"-->
+<!--            binding_views="list"-->
+<!--            view_mode="form"-->
+<!--            target="new"-->
+<!--            groups="account.group_account_manager"/>-->
+
+
+</odoo>

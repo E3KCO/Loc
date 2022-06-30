@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Supplier Sequences for eft.payment' -->
+<!--        <record id="seq_eft_payment_supplier" model="ir.sequence">-->
+<!--            <field name="name">eft Payment supplier</field>-->
+<!--            <field name="code">eft.payment</field>-->
+<!--            <field name="prefix">BC/</field>-->
+<!--            <field name="padding">4</field>-->
+<!--            <field name="company_id" eval="False"/>-->
+<!--        </record>-->
+        
+        
+        <!-- Customer Sequences for eft.payment' -->
+<!--        <record id="seq_eft_payment_customer" model="ir.sequence">-->
+<!--            <field name="name">eft Payment customer</field>-->
+<!--            <field name="code">eft.payment</field>-->
+<!--            <field name="prefix">BD/</field>-->
+<!--            <field name="padding">4</field>-->
+<!--            <field name="company_id" eval="False"/>-->
+<!--        </record>-->
+        
+        <!-- Customer Sequences for TD eft.payment' -->
+        <record id="seq_e3k_eft_payment_customer_td" model="ir.sequence">
+            <field name="name">EFT:Desjardins Payment customer</field>
+            <field name="code">eft.payment</field>
+            <field name="prefix">Desjardins/</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        
+        <!-- Supplier Sequences for TD eft.payment' -->
+        <record id="seq_e3k_eft_payment_supplier_td" model="ir.sequence">
+            <field name="name">EFT:Desjardins Payment supplier</field>
+            <field name="code">eft.payment</field>
+            <field name="prefix">Desjardins/</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

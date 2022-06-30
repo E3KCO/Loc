@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        
+    <record id="account_move_view_form_inherit_fte" model="ir.ui.view">
+        <field name="name">account.move.form.inherit.fte</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='invoice_user_id']" position="before">
+                <field name="eft" invisible='1'/>
+            </xpath>
+
+        </field>
+    </record>
+
+    </data>
+</odoo>

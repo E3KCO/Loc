@@ -1,0 +1,1070 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* e3k_eft
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e-20211223\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-11 00:43+0000\n"
+"PO-Revision-Date: 2022-04-11 00:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#, python-format
+msgid " approvals in "
+msgstr " approbations sur "
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#, python-format
+msgid " required"
+msgstr "Requis"
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment_file.py:0
+#: code:addons/e3k_eft/models/eft_payment_file.py:0
+#: code:addons/e3k_eft/models/eft_payment_file.py:0
+#: code:addons/e3k_eft/models/eft_payment_file.py:0
+#: code:addons/e3k_eft/models/eft_payment_file.py:0
+#: code:addons/e3k_eft/models/eft_payment_file.py:0
+#, python-format
+msgid "%s%s"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_account_payment_form_eft
+msgid "(EFT)"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_account_payment_search_eft
+msgid "(EFT) no sent"
+msgstr "(EFT) non envoyé"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__account_number
+#: model:ir.model.fields,field_description:e3k_eft.field_res_partner__account
+#: model:ir.model.fields,field_description:e3k_eft.field_res_users__account
+msgid "Account Number"
+msgstr "Numéro de compte"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__activity_ids
+msgid "Activities"
+msgstr "Action nécessaire"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__activity_state
+msgid "Activity State"
+msgstr "État de l'activité"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: e3k_eft
+#: model:res.groups,name:e3k_eft.eft_manager
+msgid "Allowed EFT Authentification"
+msgstr ""
+
+#. module: e3k_eft
+#: model:res.groups,name:e3k_eft.eft_batch_creation_manager
+msgid "Allowed EFT batch creation"
+msgstr ""
+
+#. module: e3k_eft
+#: model:res.groups,name:e3k_eft.eft_batch_create_delete_manager
+msgid "Allowed EFT batch creation and deletion"
+msgstr ""
+
+#. module: e3k_eft
+#: model:res.groups,name:e3k_eft.eft_configuration_manager
+msgid "Allowed EFT configurations"
+msgstr ""
+
+#. module: e3k_eft
+#: model:res.groups,name:e3k_eft.eft_contact_tab_manager
+msgid "Allowed EFT contact tab"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_eft_payment_tree
+msgid "Amount"
+msgstr "Montant"
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#, python-format
+msgid "Approuval Email"
+msgstr "E-mail d'approbation"
+
+#. module: e3k_eft
+#: model:ir.model.fields.selection,name:e3k_eft.selection__eft_payment__state__approuved
+msgid "Approuved"
+msgstr "Approuvé"
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.eft_payment_assign_form
+msgid "Assign"
+msgstr "Attribuer"
+
+#. module: e3k_eft
+#: model:ir.actions.act_window,name:e3k_eft.eft_payment_assign_action
+msgid "Assign payments in EFT"
+msgstr "Attribuer des paiements en TEF"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: e3k_eft
+#: model:ir.model.fields.selection,name:e3k_eft.selection__eft_bank__bank_name__bambora
+msgid "Bambora"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__batch_id
+msgid "Bambora batch id"
+msgstr "# Lot Bambora"
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment_file.py:0
+#: code:addons/e3k_eft/models/eft_payment_file.py:0
+#, python-format
+msgid "Bambora_payment.txt"
+msgstr ""
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment_file.py:0
+#, python-format
+msgid "Bambora_payment.zip"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__bank_name
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__name
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__related_bank_name
+msgid "Bank name"
+msgstr "Nom de banque"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__bank_center_transit
+msgid "Banking Center Transit"
+msgstr "Centre bancaire Transit"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__batch_file_upload
+msgid "Batch File Upload"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_res_partner__branch
+#: model:ir.model.fields,field_description:e3k_eft.field_res_users__branch
+msgid "Branch"
+msgstr "Branche"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__branch
+msgid "Branch number"
+msgstr "Numéro de la succursale"
+
+#. module: e3k_eft
+#: model:ir.model.fields.selection,name:e3k_eft.selection__eft_bank__bank_name__cibc
+msgid "CIBC"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.eft_payment_assign_form
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_eft_payment_form
+msgid "Cancel"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields.selection,name:e3k_eft.selection__eft_payment__state__cancelled
+msgid "Cancelled"
+msgstr "Annulé"
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#, python-format
+msgid "Click Here"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.eft_payment_assign_form
+msgid "Click On Verification"
+msgstr "Cliquez sur Vérification"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_res_partner__code
+#: model:ir.model.fields,field_description:e3k_eft.field_res_users__code
+msgid "Code"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__company_id
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__company_id
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment_assign__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_eft_payment_form
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: e3k_eft
+#: model:ir.model.fields.selection,name:e3k_eft.selection__eft_payment__state__confirm
+msgid "Confirmed"
+msgstr "Confirmé"
+
+#. module: e3k_eft
+#: model:ir.model,name:e3k_eft.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__count
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment_assign__count
+msgid "Count"
+msgstr "Nombre"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__create_uid
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__create_uid
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment_assign__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__create_date
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__create_date
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment_assign__create_date
+msgid "Created on"
+msgstr "Créé sur"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__currency_id
+msgid "Currency"
+msgstr "Devise"
+
+#. module: e3k_eft
+#: model:ir.model.fields.selection,name:e3k_eft.selection__eft_payment__payment_type__inbound
+#: model:ir.model.fields.selection,name:e3k_eft.selection__eft_payment_assign__payment_type__inbound
+msgid "Customer"
+msgstr "Client"
+
+#. module: e3k_eft
+#: model_terms:ir.actions.act_window,help:e3k_eft.action_customer_eft_payments
+msgid "Customer EFT Payment"
+msgstr "Paiement par TEF client"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_res_partner__customer_name
+#: model:ir.model.fields,field_description:e3k_eft.field_res_users__customer_name
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_partner_form_inherit_eft
+msgid "Customer name"
+msgstr "Nom du client"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__payment_date
+msgid "Date"
+msgstr ""
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#, python-format
+msgid "Dear "
+msgstr "Cher "
+
+#. module: e3k_eft
+#: model:ir.model.fields.selection,name:e3k_eft.selection__eft_bank__bank_name__desjardin
+msgid "Desjardins"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__display_approuved_button
+msgid "Display Approuved button"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__display_name
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__display_name
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment_assign__display_name
+msgid "Display Name"
+msgstr "Afficher un nom"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__display_post_button
+msgid "Display Post button"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields.selection,name:e3k_eft.selection__eft_payment__state__draft
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: e3k_eft
+#: model:account.payment.method,name:e3k_eft.account_payment_method_eft_in
+#: model:account.payment.method,name:e3k_eft.account_payment_method_eft_out
+#: model:ir.ui.menu,name:e3k_eft.menu_account_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_partner_form_inherit_eft
+msgid "EFT"
+msgstr "TFE"
+
+#. module: e3k_eft
+#: model:ir.actions.act_window,name:e3k_eft.action_eft_bank
+#: model:ir.model.fields,field_description:e3k_eft.field_account_payment__eft_bank
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__eft_bank
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment_assign__eft_bank
+#: model:ir.ui.menu,name:e3k_eft.menu_eft_bank
+msgid "EFT Bank"
+msgstr "Banque TEF"
+
+#. module: e3k_eft
+#: model:ir.actions.act_window,name:e3k_eft.action_customer_eft_payments
+#: model:ir.actions.act_window,name:e3k_eft.action_eft_payments
+#: model:ir.actions.act_window,name:e3k_eft.action_supplier_eft_payments
+#: model:ir.ui.menu,name:e3k_eft.menu_customer_eft_payments
+#: model:ir.ui.menu,name:e3k_eft.menu_supplier_eft_payments
+msgid "EFT Payments"
+msgstr "Paiements par TEF"
+
+#. module: e3k_eft
+#: model:ir.model,name:e3k_eft.model_eft_bank
+msgid "EFT bank"
+msgstr "Banque TEF"
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#, python-format
+msgid "Error %s  Message %s"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_eft_payment_form
+msgid "Exported file"
+msgstr "Fichier exporté"
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_bank.py:0
+#: code:addons/e3k_eft/models/res_partner.py:0
+#, python-format
+msgid "Field account is contain %s, it must be an integer"
+msgstr "Le compte contient %s, doit être un entier"
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_bank.py:0
+#, python-format
+msgid "Field institution is contain %s, it must be an integer"
+msgstr "Le num de l'institution contient %s, doit être un entier"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__data
+msgid "File"
+msgstr "Fichier"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__content
+msgid "FileTxt"
+msgstr "Fichier TxT"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__filename
+msgid "Filename"
+msgstr "Nom de fichier"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__institution
+msgid "Financial institution"
+msgstr "Institution financière"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__message_follower_ids
+msgid "Followers"
+msgstr "Abonnés"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Abonnés"
+
+#. module: e3k_eft
+#: model:ir.model.fields,help:e3k_eft.field_eft_payment__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_eft_payment_form
+msgid "Generate file"
+msgstr "Générer un fichier"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__file_generated
+msgid "Generated File"
+msgstr "Fichier généré"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__id
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__id
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment_assign__id
+msgid "ID"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,help:e3k_eft.field_eft_payment__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,help:e3k_eft.field_eft_payment__message_needaction
+#: model:ir.model.fields,help:e3k_eft.field_eft_payment__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si coché, les nouveaux messages nécessitent votre attention"
+
+#. module: e3k_eft
+#: model:ir.model.fields,help:e3k_eft.field_eft_payment__message_has_error
+#: model:ir.model.fields,help:e3k_eft.field_eft_payment__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si coché, certains messages ont une erreur de livraison"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__advice
+msgid "Informations"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_res_partner__institution
+#: model:ir.model.fields,field_description:e3k_eft.field_res_users__institution
+msgid "Institution"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__note
+msgid "Internal Notes"
+msgstr "Notes internes"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__issuer_long_name
+msgid "Issuer Long Name"
+msgstr "Nom long de l'émetteur"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__issuer_number
+msgid "Issuer Number"
+msgstr "Numéro de l'émetteur"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__issuer_short_name
+msgid "Issuer Short Name"
+msgstr "Nom court de l'émetteur"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__journal_ids
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__related_journal
+msgid "Journal"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model,name:e3k_eft.model_account_move
+msgid "Journal Entry"
+msgstr "Pièce comptable"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank____last_update
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment____last_update
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment_assign____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__last_sequence
+msgid "Last Sequence"
+msgstr "Dernière séquence"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__write_uid
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__write_uid
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment_assign__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__write_date
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__write_date
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment_assign__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__line_total
+msgid "Lines total"
+msgstr "Total des lignes"
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#, python-format
+msgid "Lot transferred"
+msgstr "Lot transferer"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__merchant_id
+msgid "MerchantID"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__message_info
+msgid "Message"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__filename
+msgid "Name of the file to export"
+msgstr ""
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_res_partner__number_transit_client
+#: model:ir.model.fields,field_description:e3k_eft.field_res_users__number_transit_client
+msgid "Number Transit"
+msgstr "Numéro de transit"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'actions"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__required_approval_number
+msgid "Number of approvals required"
+msgstr "Nombre d'approbations requises"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'erreurs"
+
+#. module: e3k_eft
+#: model:ir.model.fields,help:e3k_eft.field_eft_payment__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Nombre de messages nécessitant une action"
+
+#. module: e3k_eft
+#: model:ir.model.fields,help:e3k_eft.field_eft_payment__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de messages avec erreur de livraison"
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.eft_payment_assign_form
+msgid "Number of payments"
+msgstr "Nombre de paiements"
+
+#. module: e3k_eft
+#: model:ir.model.fields,help:e3k_eft.field_eft_payment__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__number_of_approval
+msgid "Number success approval"
+msgstr "nombre d'approbation avec succès  "
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__lot_operation_code
+msgid "Operation Code"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.eft_bank_form
+msgid "Other Information"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment_assign__payment_ids
+msgid "Payment"
+msgstr "Paiement"
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_eft_payment_form
+msgid "Payment Lines"
+msgstr "Lignes de paiement"
+
+#. module: e3k_eft
+#: model:ir.model,name:e3k_eft.model_account_payment_method
+msgid "Payment Methods"
+msgstr "Méthodes de paiements"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__payment_passcode
+msgid "Payment Passocde"
+msgstr "Code de paiement"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__payment_type
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment_assign__payment_type
+msgid "Payment Type"
+msgstr "Type de paiement"
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_eft_payment_form
+msgid "Payment lines"
+msgstr "Lignes de paiement"
+
+#. module: e3k_eft
+#: model:ir.model,name:e3k_eft.model_account_payment
+#: model:ir.model.fields,field_description:e3k_eft.field_account_payment__transaction_id
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__payment_ids
+msgid "Payments"
+msgstr "Paiements"
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.eft_payment_assign_form
+msgid "Payments Assign"
+msgstr "Attribution des paiements"
+
+#. module: e3k_eft
+#: model_terms:ir.actions.act_window,help:e3k_eft.action_customer_eft_payments
+#: model_terms:ir.actions.act_window,help:e3k_eft.action_supplier_eft_payments
+msgid ""
+"Payments are used to register liquidity movements. You can process those payments by your own means\n"
+"                    or by using installed facilities."
+msgstr ""
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#, python-format
+msgid "Plase configure your bank Sequence."
+msgstr ""
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment_file.py:0
+#, python-format
+msgid "Please Configure EFT information of this partner %s."
+msgstr ""
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/wizard/eft_payment_assign.py:0
+#, python-format
+msgid "Please Create Your Company bank account %s."
+msgstr ""
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#, python-format
+msgid "Please approve the payment"
+msgstr ""
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/wizard/eft_payment_assign.py:0
+#, python-format
+msgid "Please check Your bank account of %s."
+msgstr "Veuillez vérifier votre compte bancaire de %s."
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment_file.py:0
+#: code:addons/e3k_eft/models/eft_payment_file.py:0
+#, python-format
+msgid "Please check the bank account of %s."
+msgstr "Veuillez vérifier le compte bancaire de %s."
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment_file.py:0
+#: code:addons/e3k_eft/models/eft_payment_file.py:0
+#, python-format
+msgid "Please check the bank configuration of %s."
+msgstr ""
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/res_partner.py:0
+#, python-format
+msgid "Please fill in the bank details before"
+msgstr "Veuillez remplir les coordonnées bancaires avant"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_res_partner__referal_number
+#: model:ir.model.fields,field_description:e3k_eft.field_res_users__referal_number
+msgid "Referal Number"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_eft_payment_form
+msgid "Register Payment"
+msgstr "Enregistrer le paiement"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__related_required_approval
+msgid "Require approbation"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_eft_payment_form
+msgid "Reset To Draft"
+msgstr "Réinitialiser au brouillon"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields.selection,name:e3k_eft.selection__eft_payment__state__send
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_eft_payment_form
+msgid "Send"
+msgstr "Envoyer"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_account_payment__sent
+msgid "Sent"
+msgstr "Envoyée"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__client_sequence_id
+msgid "Sequence Paiement Client "
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__supplier_sequence_id
+msgid "Sequence Paiement Fournisseur"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__state
+msgid "Status"
+msgstr "Statut"
+
+#. module: e3k_eft
+#: model:ir.model.fields,help:e3k_eft.field_eft_payment__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__succees_transfert_message
+msgid "Succes Message"
+msgstr "Message"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__success_approval_users
+msgid "Success Users"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields.selection,name:e3k_eft.selection__eft_payment__payment_type__outbound
+#: model:ir.model.fields.selection,name:e3k_eft.selection__eft_payment_assign__payment_type__outbound
+msgid "Supplier"
+msgstr "Fournisseur"
+
+#. module: e3k_eft
+#: model_terms:ir.actions.act_window,help:e3k_eft.action_supplier_eft_payments
+msgid "Supplier EFT Payment"
+msgstr "Paiement par TEF du fournisseur"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_account_bank_statement_line__eft
+#: model:ir.model.fields,field_description:e3k_eft.field_account_move__eft
+#: model:ir.model.fields,field_description:e3k_eft.field_account_payment__eft
+#: model:ir.model.fields,field_description:e3k_eft.field_res_partner__fte
+#: model:ir.model.fields,field_description:e3k_eft.field_res_users__fte
+msgid "TFE"
+msgstr "TEF"
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#, python-format
+msgid "Thanks"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.eft_bank_form
+msgid "The 10 digit Issuer Number"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.eft_bank_form
+msgid "The 10 digit others info"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_partner_form_inherit_eft
+msgid "The 12 Account number of beneficiary or drawer"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.eft_bank_form
+msgid "The 12 digit Account number"
+msgstr "Le numéro de compte à 5-12 chiffres"
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_partner_form_inherit_eft
+msgid "The 13 digit Client Referal Number"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.eft_bank_form
+msgid "The 15 digit Issuer short name"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.eft_bank_form
+msgid "The 3 digit Operation Code"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_partner_form_inherit_eft
+msgid "The 3 digit financial institution number"
+msgstr "Le numéro d'institution financière à 3 chiffres"
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.eft_bank_form
+msgid "The 30 digit Issuer Long name"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_partner_form_inherit_eft
+msgid "The 4 digit Client institution code"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.eft_bank_form
+msgid "The 4 digit Institution Number"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.eft_bank_form
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_partner_form_inherit_eft
+msgid "The 5 digit Banking center transit"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_partner_form_inherit_eft
+msgid "The 5 digit bank transit number"
+msgstr "Le numéro de transit bancaire à 5 chiffres"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__amount
+msgid "Total Amount"
+msgstr "Montant total"
+
+#. module: e3k_eft
+#: model:ir.model.fields,help:e3k_eft.field_eft_payment__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type d'activité d'exception enregistrée"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_res_partner__unit
+#: model:ir.model.fields,field_description:e3k_eft.field_res_users__unit
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_partner_form_inherit_eft
+msgid "Unit"
+msgstr "Unité"
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__bank_url
+msgid "Url"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__approval_users
+msgid "Users who can approve"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.eft_payment_assign_form
+msgid "Verification"
+msgstr "Vérification"
+
+#. module: e3k_eft
+#: model:ir.model.fields.selection,name:e3k_eft.selection__eft_payment__state__waiting_approuve
+msgid "Waiting"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_payment__website_message_ids
+msgid "Website Messages"
+msgstr "Messages du site Web"
+
+#. module: e3k_eft
+#: model:ir.model.fields,help:e3k_eft.field_eft_payment__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#, python-format
+msgid "You cannot delete a payment that is already posted."
+msgstr "Vous ne pouvez pas supprimer un paiement qui a déjà été comptabilisé."
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#, python-format
+msgid "You don't have the right to approve"
+msgstr ""
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#, python-format
+msgid "You have already approved"
+msgstr ""
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#, python-format
+msgid "You must configure bambora Merchant Id and batch file Upload"
+msgstr ""
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment_file.py:0
+#, python-format
+msgid ""
+"Your file has been exported.\n"
+"you can download it"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields.selection,name:e3k_eft.selection__eft_payment__state__request_to_approuve
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_eft_payment_form
+msgid "application for approval"
+msgstr ""
+
+#. module: e3k_eft
+#: model_terms:ir.ui.view,arch_db:e3k_eft.view_eft_payment_form
+msgid "approuve"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__required_approval
+msgid "approval required"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model,name:e3k_eft.model_eft_payment
+msgid "eft payment"
+msgstr "Paiement TFE"
+
+#. module: e3k_eft
+#: model:ir.model,name:e3k_eft.model_eft_payment_assign
+msgid "eft payment assign"
+msgstr "attribution de paiement TFE"
+
+#. module: e3k_eft
+#: code:addons/e3k_eft/models/eft_payment.py:0
+#, python-format
+msgid "i approved"
+msgstr ""
+
+#. module: e3k_eft
+#: model:ir.model.fields,field_description:e3k_eft.field_eft_bank__other_info_lot
+msgid "others info"
+msgstr ""
