@@ -676,7 +676,7 @@ class EftPayment(models.Model):
             {
                 'state': 'send',
                 'data': out, 'advice': advice,
-                'filename': _('%s%s' % ("1464", '.dat')),
+                'filename': name,
             }
         )
         # EftBank.sequence_id.next_by_id()
