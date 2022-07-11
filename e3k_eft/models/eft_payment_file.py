@@ -57,18 +57,18 @@ class EftPayment(models.Model):
         this = self.sudo()
         if this.related_bank_name in ['desjardin','bnc']:
             this = self.sudo()
-            separator = str(
+            separator = self.eft_bank.filename or str(
                 this.payment_date
             ).replace('-', '') + this.eft_bank.name + this.company_id.name
             return separator + ".txt"
         if this.related_bank_name == 'bambora':
-            separator = str(
+            separator = self.eft_bank.filename or str(
                 this.payment_date
             ).replace('-', '') + "_BamborA_" + this.company_id.name
             return separator + ".txt"
         if this.related_bank_name == 'cibc':
             this = self.sudo()
-            separator = str(
+            separator = self.eft_bank.filename or  str(
                 this.payment_date
             ).replace('-', '') + this.eft_bank.name + this.company_id.name
             return separator + ".dat"
@@ -642,7 +642,7 @@ class EftPayment(models.Model):
         files.append(content_file)
         files.append(end_file)
         # payment_name =
-        name = ''.join(filter(str.isdigit, self.name))
+        name = self.eft_bank.filename or ''.join(filter(str.isdigit, self.name))
 
         fileName = os.path.join(
             dirname, _('%s%s' % (name, '.zip'))
@@ -676,7 +676,7 @@ class EftPayment(models.Model):
             {
                 'state': 'send',
                 'data': out, 'advice': advice,
-                'filename': _('%s%s' % ("1464", '.dat')),
+                'filename': name,
             }
         )
         # EftBank.sequence_id.next_by_id()
@@ -684,7 +684,7 @@ class EftPayment(models.Model):
 
     def get_1464_file_name(self):
         this = self.sudo()
-        separator = '%s' % (this.eft_bank.name)
+        separator = '%s' % (self.eft_bank.filename or this.eft_bank.name)
         return separator + ".txt"
 
     def create_1464_header_file(self, dirname):

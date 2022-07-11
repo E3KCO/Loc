@@ -76,7 +76,7 @@
                             <group states="send">
                                 <separator  string="Exported file"/>
                                 <field name="filename" invisible="1"/>
-                                <field name="data" nolabel="1" readonly="1" filename="name"/>
+                                <field name="data" nolabel="1" readonly="1" filename="filename"/>
                                 <field name="advice" nolabel="1" style="color:blue ! important;"/>
                                 <field name="batch_id" readonly="1" attrs="{'invisible':[('batch_id','==',False)]}" />
                                 <field name="succees_transfert_message"
