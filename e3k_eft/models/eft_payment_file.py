@@ -774,8 +774,11 @@ class EftPayment(models.Model):
         }
 
         # sequence = params['eft_bank'].sequence_id
-        payment_name = ''.join(filter(str.isdigit, self.name))
-        print('payment_name',payment_name)
+        if params['eft_bank'].bank_name == 'bnc':
+            payment_name = '00001'
+        else:
+            payment_name = ''.join(filter(str.isdigit, self.name))
+
         header_line = [{
             'code': 'A',
             'logical_record_count': '000000001',
