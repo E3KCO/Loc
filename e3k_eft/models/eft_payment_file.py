@@ -774,13 +774,16 @@ class EftPayment(models.Model):
         }
 
         # sequence = params['eft_bank'].sequence_id
-        payment_name = ''.join(filter(str.isdigit, self.name))
-        print('payment_name',payment_name)
+        if params['eft_bank'].bank_name == 'bnc':
+            payment_name = params['eft_bank'].supplier_sequence_id.number_next_actual
+        else:
+            payment_name = ''.join(filter(str.isdigit, self.name))
+
         header_line = [{
             'code': 'A',
             'logical_record_count': '000000001',
             'issuer_number': str(params['eft_bank'].issuer_number),
-            'file_creation_number': payment_name or "0000" ,
+            'file_creation_number': payment_name.zfill(4) or "0000" ,
             'creation_date': '0' + self.eft_date.strftime('%y%j'),
             'dest_data_center': "81510",
             'bl1': '',
