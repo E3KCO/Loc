@@ -807,7 +807,10 @@ class EftPayment(models.Model):
 
     def create_header_lot_detailed_1464(self, dirname, files, cd, lines):
         final_string = ''
-        payment_name = ''.join(filter(str.isdigit, self.name))
+        if self.eft_bank.bank_name == 'bnc':
+            payment_name = self.eft_bank.supplier_sequence_id.number_next_actual
+        else:
+            payment_name = ''.join(filter(str.isdigit, self.name))
         print('payment_name',payment_name)
         sum = 0
         nbr_record = 0
@@ -843,7 +846,7 @@ class EftPayment(models.Model):
             'cd': cd,
             'record_count': str(str(cpt_line).zfill(9)),
             'control_number': params['eft_bank'].issuer_number,
-            'number_file': payment_name or "0000",}]
+            'number_file': str(payment_name).zfill(4) or "0000",}]
         final_string += self.generate1464_render_flat_file(keys0, header_size0, header_line0, header_align0, retu=1)
         cpt = 1
         for rec in lines:
@@ -938,8 +941,8 @@ class EftPayment(models.Model):
             if self.eft_bank.bank_name == 'bnc':
                 keys.append('bl6')
                 header_size['bl6'] = 1200
-                header_line['bl6'] = ''
-                header_align[0]['bl6'] = 'l'
+                header_align['bl6'] = ''
+                header_line[0]['bl6'] = 'l'
 
 
 
@@ -964,7 +967,7 @@ class EftPayment(models.Model):
                     'cd': cd,
                     'record_count': str(str(cpt_line).zfill(9)),
                     'control_number': params['eft_bank'].issuer_number,
-                    'number_file': payment_name or "0000", }]
+                    'number_file': str(payment_name).zfill(4) or "0000", }]
 
                 final_string += self.generate1464_render_flat_file(keys2, header_size2, header_line2, header_align2,
                                                                    retu=1)
@@ -980,9 +983,12 @@ class EftPayment(models.Model):
         return files
 
     def create_end_file_1464(self, dirname, files):
-        payment_name = ''.join(filter(str.isdigit, self.name))
-        print('payment_name',payment_name)
+
         params = self.get_company_params()
+        if params['eft_bank'].bank_name == 'bnc':
+            payment_name = params['eft_bank'].supplier_sequence_id.number_next_actual
+        else:
+            payment_name = ''.join(filter(str.isdigit, self.name))
         this = self.sudo()
         cd = 'C'
         if this.payment_type != 'outbound':
@@ -1046,7 +1052,7 @@ class EftPayment(models.Model):
             'code': 'Z',
             'record_count': str(str(end_lint_cpt).zfill(9)),
             'control_nbr': str(params['eft_bank'].issuer_number),
-            'nbr_file': payment_name or "0000",
+            'nbr_file': str(payment_name).zfill(4) or "0000",
             'total_value': mont_total.zfill(14) if cd == 'D' else '0'.zfill(14),
             'nbr_debit_trans': str(len(this.payment_ids)).zfill(8) if cd == 'D' else '0'.zfill(8),
             'total_value_cred': mont_total.zfill(14) if cd == 'C' else '0'.zfill(14),
