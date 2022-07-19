@@ -783,7 +783,7 @@ class EftPayment(models.Model):
             'code': 'A',
             'logical_record_count': '000000001',
             'issuer_number': str(params['eft_bank'].issuer_number),
-            'file_creation_number': payment_name.zfill(4) or "0000" ,
+            'file_creation_number': str(payment_name).zfill(4) or "0000" ,
             'creation_date': '0' + self.eft_date.strftime('%y%j'),
             'dest_data_center': "81510",
             'bl1': '',
