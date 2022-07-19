@@ -785,7 +785,7 @@ class EftPayment(models.Model):
             'issuer_number': str(params['eft_bank'].issuer_number),
             'file_creation_number': str(payment_name).zfill(4) or "0000" ,
             'creation_date': '0' + self.eft_date.strftime('%y%j'),
-            'dest_data_center': "81510",
+            'dest_data_center': "00610" if self.eft_bank.bank_name == 'bnc' else "81510",
             'bl1': '',
             'currency': str(params['payments'].currency_id.name),
             'bl2': '',  # str(params['eft_bank'].institution),
@@ -910,6 +910,7 @@ class EftPayment(models.Model):
                 'invalid_field': "l",
 
             }
+
             mont = str(('%.2f' % rec.amount).replace('.', ''))
 
             header_line = [{
@@ -934,6 +935,13 @@ class EftPayment(models.Model):
                 'invalid_field': '0'.zfill(11),
 
             }]
+            if self.eft_bank.bank_name == 'bnc':
+                keys.append('bl6')
+                header_size['bl6'] = 1200
+                header_line['bl6'] = ''
+                header_align[0]['bl6'] = 'l'
+
+
 
             if cpt % 6 == 0 and cpt < len(lines):
                 cpt_line += 1
