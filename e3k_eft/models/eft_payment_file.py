@@ -934,15 +934,15 @@ class EftPayment(models.Model):
                 'return_account': str(params['eft_bank'].account_number or ''),
                 'sundary': "",
                 'bl2': "",
-                'account_setl': "01",
+                'account_setl': "",
                 'invalid_field': '0'.zfill(11),
 
             }]
             if self.eft_bank.bank_name == 'bnc':
                 keys.append('bl6')
                 header_size['bl6'] = 1200
-                header_align['bl6'] = ''
-                header_line[0]['bl6'] = 'l'
+                header_align['bl6'] = 'l'
+                header_line[0]['bl6'] = ''
 
 
 
